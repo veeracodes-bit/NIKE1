@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike. Just Do It. Nike IN</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='%23111' d='M21.71 6.32a.75.75 0 0 0-.75-.12l-18.5 7.5a.75.75 0 0 0 .1 1.41l5.24 1.75l2.42 4.84a.75.75 0 0 0 1.34 0l10.15-15.38z'/></svg>">
+    
+    <!-- Bootstrap 5 CSS (Used for Navbar & Hero Carousel only) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Custom 100% Nike Pure CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         1. PRE-HEADER UTILITY BAR
+         ========================================================================== -->
+    <div class="pre-header">
+        <div class="nike-container pre-header-inner">
+            <!-- Brand Sub-Logos (Jordan & Converse) -->
+            <div class="brand-sub-logos">
+                <a href="#jordan" title="Jordan">
+                    <!-- Jordan Jumpman SVG Logo -->
+                    <svg viewBox="0 0 24 24" height="18" fill="currentColor">
+                        <path d="M12.56 2.05a1.26 1.26 0 1 0 1.26 1.26 1.26 1.26 0 0 0-1.26-1.26zm3.3 4.83l-1.92 2.65-.96-1.21-.02-.02a1.73 1.73 0 0 0-1.39-.7 1.83 1.83 0 0 0-1.46.74l-3.3 4.2a1.36 1.36 0 0 0-.25.81 1.4 1.4 0 0 0 1.4 1.4h2.15l-1.57 6.18a.9.9 0 0 0 .87 1.12.92.92 0 0 0 .84-.56l3.35-7.79 3.03 7.82a.9.9 0 0 0 .84.57.9.9 0 0 0 .87-1.12l-1.63-6.22h2.21a1.4 1.4 0 0 0 1.4-1.4 1.35 1.35 0 0 0-.26-.81l-3.38-4.25z"/>
+                    </svg>
+                </a>
+                <a href="#converse" title="Converse">
+                    <!-- Converse Star Chevron SVG Logo -->
+                    <svg viewBox="0 0 24 24" height="16" fill="currentColor">
+                        <path d="M12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2Z"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Utility Links -->
+            <div class="utility-links">
+                <a href="#help">Help</a>
+                <span class="separator">|</span>
+                <a href="#join-us">Sign Up</a>
+                <span class="separator">|</span>
+                <a href="#sign-in">Loginn</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         2. MAIN NIKE NAVBAR (BOOTSTRAP 5 WITH NIKE MEGA MENUS)
+         ========================================================================== -->
+    <nav class="navbar navbar-expand-lg nike-navbar">
+        <div class="nike-container d-flex align-items-center justify-content-between position-relative">
+            <!-- Nike Swoosh Brand Logo -->
+            <a class="navbar-brand" href="index.html" aria-label="Nike Home">
+                <svg class="nike-swoosh-logo" viewBox="0 0 24 24">
+                    <path d="M21.707 5.293c-.2-.2-.51-.27-.78-.18L2.43 11.53c-.32.11-.5.44-.42.77.07.28.32.49.61.51l5.88.42 3.12 6.55c.13.27.41.44.71.44h.04c.31-.02.58-.22.68-.51l8.77-13.88c.13-.2.09-.47-.12-.54zM9.54 12.39l-4.52-.32 12.65-4.43-8.13 4.75z"/>
+                </svg>
+            </a>
+
+            <!-- Mobile Hamburger Toggle Button -->
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#nikeNavContent" aria-controls="nikeNavContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Nav Links (Center with Mega Menus) -->
+            <div class="collapse navbar-collapse justify-content-center" id="nikeNavContent">
+                <ul class="navbar-nav">
+                    <!-- 1. New & Featured (Mega Menu) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#new">New & Featured</a>
+                        <div class="nike-mega-menu">
+                            <div class="mega-menu-grid">
+                                <div>
+                                    <h4 class="mega-col-title">Featured</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#new-arrivals">New Arrivals</a></li>
+                                        <li><a href="#bestsellers">Bestsellers</a></li>
+                                        <li><a href="#under-4999"><strong>Top Picks Under ₹4,999</strong></a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Trending</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#just-do-the-work">Just Do The Work</a></li>
+                                        <li><a href="#retro-running">Retro Running</a></li>
+                                        <li><a href="#acg">All Conditions Gear</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Shop Icons</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#air-force-1">Air Force 1</a></li>
+                                        <li><a href="#air-jordan-1">Air Jordan 1</a></li>
+                                        <li><a href="#air-max">Air Max</a></li>
+                                        <li><a href="#dunk">Dunk</a></li>
+                                        <li><a href="#pegasus">Pegasus</a></li>
+                                        <li><a href="#vomero">Vomero</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Sport</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#running">Running</a></li>
+                                        <li><a href="#training">Gym & Training</a></li>
+                                        <li><a href="#sportswear">Sportswear</a></li>
+                                        <li><a href="#football">Football</a></li>
+                                        <li><a href="#basketball">Basketball</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 2. Men (Mega Menu) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#men">Men</a>
+                        <div class="nike-mega-menu">
+                            <div class="mega-menu-grid">
+                                <div>
+                                    <h4 class="mega-col-title">Featured</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#men-new">New Arrivals</a></li>
+                                        <li><a href="#men-bestsellers">Bestsellers</a></li>
+                                        <li><a href="#men-sale">Shop All Sale</a></li>
+                                        <li><a href="#men-acg">All Conditions Gear</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Shoes</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#men-all-shoes">All Shoes</a></li>
+                                        <li><a href="#men-lifestyle">Lifestyle</a></li>
+                                        <li><a href="#men-jordan">Jordan</a></li>
+                                        <li><a href="#men-running">Running</a></li>
+                                        <li><a href="#men-basketball">Basketball</a></li>
+                                        <li><a href="#men-training">Gym & Training</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Clothing</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#men-all-clothing">All Clothing</a></li>
+                                        <li><a href="#men-tshirts">Tops & T-Shirts</a></li>
+                                        <li><a href="#men-shorts">Shorts</a></li>
+                                        <li><a href="#men-pants">Pants & Leggings</a></li>
+                                        <li><a href="#men-hoodies">Hoodies & Sweatshirts</a></li>
+                                        <li><a href="#men-jackets">Jackets & Gilets</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Shop By Sport</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#men-sport-running">Running</a></li>
+                                        <li><a href="#men-sport-football">Football</a></li>
+                                        <li><a href="#men-sport-basketball">Basketball</a></li>
+                                        <li><a href="#men-sport-tennis">Tennis & Pickleball</a></li>
+                                        <li><a href="#men-sport-training">Gym & Training</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 3. Women (Mega Menu) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#women">Women</a>
+                        <div class="nike-mega-menu">
+                            <div class="mega-menu-grid">
+                                <div>
+                                    <h4 class="mega-col-title">Featured</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#women-new">New Arrivals</a></li>
+                                        <li><a href="#women-bestsellers">Bestsellers</a></li>
+                                        <li><a href="#women-sale">Shop All Sale</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Shoes</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#women-all-shoes">All Shoes</a></li>
+                                        <li><a href="#women-lifestyle">Lifestyle</a></li>
+                                        <li><a href="#women-running">Running</a></li>
+                                        <li><a href="#women-jordan">Jordan</a></li>
+                                        <li><a href="#women-training">Gym & Training</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Clothing</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#women-clothing">All Clothing</a></li>
+                                        <li><a href="#women-tshirts">Tops & T-Shirts</a></li>
+                                        <li><a href="#women-bras">Sports Bras</a></li>
+                                        <li><a href="#women-leggings">Pants & Leggings</a></li>
+                                        <li><a href="#women-hoodies">Hoodies & Sweatshirts</a></li>
+                                        <li><a href="#women-skirts">Skirts & Dresses</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Shop By Sport</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#women-yoga">Yoga</a></li>
+                                        <li><a href="#women-running-sport">Running</a></li>
+                                        <li><a href="#women-training-sport">Gym & Training</a></li>
+                                        <li><a href="#women-tennis">Tennis</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 4. Kids (Mega Menu) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#kids">Kids</a>
+                        <div class="nike-mega-menu">
+                            <div class="mega-menu-grid">
+                                <div>
+                                    <h4 class="mega-col-title">Featured</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#kids-new">New Arrivals</a></li>
+                                        <li><a href="#kids-bestsellers">Bestsellers</a></li>
+                                        <li><a href="#kids-back-to-school">Back to School</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Shoes</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#kids-all-shoes">All Shoes</a></li>
+                                        <li><a href="#kids-lifestyle">Lifestyle</a></li>
+                                        <li><a href="#kids-running">Running</a></li>
+                                        <li><a href="#kids-jordan">Jordan</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Kids By Age</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#older-kids">Older Kids (7 - 14 yrs)</a></li>
+                                        <li><a href="#younger-kids">Younger Kids (4 - 7 yrs)</a></li>
+                                        <li><a href="#toddlers">Babies & Toddlers (0 - 4 yrs)</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Clothing & Accessories</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#kids-clothing">All Clothing</a></li>
+                                        <li><a href="#kids-backpacks">Bags & Backpacks</a></li>
+                                        <li><a href="#kids-caps">Hats & Headwear</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 5. Jordan (Mega Menu) -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#jordan">Jordan</a>
+                        <div class="nike-mega-menu">
+                            <div class="mega-menu-grid">
+                                <div>
+                                    <h4 class="mega-col-title">New & Featured</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#jordan-new">New Arrivals</a></li>
+                                        <li><a href="#jordan-bestsellers">Bestsellers</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Men</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#jordan-men-all">Shop All</a></li>
+                                        <li><a href="#jordan-men-shoes">Shoes</a></li>
+                                        <li><a href="#jordan-men-clothing">Clothing</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Women</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#jordan-women-all">Shop All</a></li>
+                                        <li><a href="#jordan-women-shoes">Shoes</a></li>
+                                        <li><a href="#jordan-women-clothing">Clothing</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="mega-col-title">Sport</h4>
+                                    <ul class="mega-col-links">
+                                        <li><a href="#jordan-basketball">Jordan Basketball</a></li>
+                                        <li><a href="#jordan-football">Jordan Football</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- 6. Sale -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sale">Sale</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Header Right: Search, Wishlist, Cart -->
+            <div class="navbar-actions">
+                <!-- Search Box Pill -->
+                <div class="search-box-pill d-none d-md-flex">
+                    <button class="search-icon-btn" aria-label="Search">
+                        <i class="bi bi-search"></i>
+                    </button>
+                    <input type="text" placeholder="Search" aria-label="Search Nike Products">
+                </div>
+
+                <!-- Wishlist Heart Button -->
+                <button class="action-icon-btn" title="Wishlist" aria-label="Wishlist">
+                    <i class="bi bi-heart fs-5"></i>
+                    <span class="action-badge">2</span>
+                </button>
+
+                <!-- Shopping Bag Button -->
+                <button class="action-icon-btn" title="Shopping Bag" aria-label="Shopping Bag">
+                    <i class="bi bi-bag fs-5"></i>
+                    <span class="action-badge">1</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================================================
+         3. PROMO NOTIFICATION TICKER (AS SEEN ON NIKE.IN)
+         ========================================================================== -->
+    <div class="promo-ticker">
+        <div class="ticker-text">Download the Nike App for Exclusive Member Rewards & Special Offers</div>
+        <div class="ticker-subtext">
+            Get first access to exclusive drops and free delivery. 
+            <a href="#download">Download Now</a> | <a href="#tnc">T&Cs</a>
+        </div>
+    </div>
+
+    <!-- ==========================================================================
+         4. HERO CAMPAIGN CAROUSEL (BOOTSTRAP 5 CAROUSEL - EXACT LIVE CAMPAIGNS)
+         ========================================================================== -->
+    <section class="hero-carousel-section">
+        <div id="nikeHeroCarousel" class="carousel slide carousel-fade nike-hero-carousel" data-bs-ride="carousel" data-bs-interval="5000">
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#nikeHeroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#nikeHeroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#nikeHeroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+
+            <!-- Carousel Slides -->
+            <div class="carousel-inner">
+                <!-- Slide 1: Live Campaign: ELEVATE YOUR PRE-GAME ROUTINE -->
+                <div class="carousel-item active">
+                    <img src="./images/banner1.jpg" alt="Nike 24.7 Pre-Game Routine">
+                </div>
+                <!-- Slide 2: Live Campaign: MOON SHOE -->
+                <div class="carousel-item">
+                    <img src="./images/banner3.jpg" alt="Nike Moon Shoe Origin of Speed">
+                </div>
+                <!-- Slide 3: Live Campaign: PEGASUS 42 & VOMERO 18 -->
+                <div class="carousel-item">
+                    <img src="./images/banner2.jpg" alt="Nike Pegasus 42 Running Campaign">
+                </div>
+            </div>
+
+            <!-- Carousel Navigation Arrows -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#nikeHeroCarousel" data-bs-slide="prev" aria-label="Previous">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#nikeHeroCarousel" data-bs-slide="next" aria-label="Next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+
+        <!-- Hero Overlay Content (Exact Nike.in live headline) -->
+        <div class="hero-content-wrapper nike-container">
+            <span class="hero-subtitle-tag">Nike 24.7 Collection</span>
+            <h1 class="hero-main-title">ELEVATE YOUR PRE-GAME ROUTINE</h1>
+            <p class="hero-description">
+                Tailored for the moments before competition. Designed to keep athletes focused, comfortable, and ready to perform at the highest level.
+            </p>
+            <div class="hero-cta-group">
+                <a href="#shop" class="nike-btn-pill">Shop Collection</a>
+                <a href="#campaign-film" class="nike-btn-pill pill-light">Watch Film</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         4.5 FEATURED CAMPAIGN FILM (CINEMATIC ATHLETE VIDEO)
+         ========================================================================== -->
+    <section class="campaign-video-section" id="campaign-film">
+        <div class="nike-container">
+            <h2 class="section-title">Featured Campaign</h2>
+            <div class="video-container-card">
+                <video id="nikeVideoPlayer" autoplay muted loop playsinline poster="./images/banner2.jpg">
+                    <source src="./images/nike_campaign.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+
+                <!-- Floating Play/Pause & Audio Controls -->
+                <div class="video-controls-overlay">
+                    <button class="video-ctrl-btn" id="videoPlayToggle" title="Pause / Play" aria-label="Play or Pause Video">
+                        <i class="bi bi-pause-fill" id="playIcon"></i>
+                    </button>
+                    <button class="video-ctrl-btn" id="videoMuteToggle" title="Mute / Unmute" aria-label="Mute or Unmute Video">
+                        <i class="bi bi-volume-mute-fill" id="volumeIcon"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Video Text Content (From live Nike.in) -->
+            <div class="video-text-content">
+                <span class="hero-subtitle-tag">The Origin of Speed</span>
+                <h2 class="hero-main-title">MOON SHOE & BEYOND</h2>
+                <p class="hero-description">
+                    From Bill Bowerman's waffle iron to the revolutionary ZoomX super-foams. Discover 50 years of relentless track and road running obsession.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#shop-moon" class="nike-btn-pill">Shop Moon Shoe</a>
+                    <a href="#running" class="nike-btn-pill pill-light">Shop Running</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. SPOTLIGHT / "THE LATEST" SECTION (DIRECT FROM NIKE.IN)
+         ========================================================================== -->
+    <section class="spotlight-section">
+        <div class="nike-container">
+            <h2 class="section-title">The Latest</h2>
+            <div class="spotlight-grid">
+                <!-- Spotlight 1: Top Picks Under 4999 -->
+                <div class="spotlight-card">
+                    <img src="./images/spotlight1.jpg" alt="Top Picks Under 4999">
+                    <div class="spotlight-overlay">
+                        <h3>Top Picks Under ₹4,999</h3>
+                        <p>Essential sports footwear and apparel designed for everyday budget.</p>
+                        <a href="#under-4999" class="nike-btn-pill">Shop Now</a>
+                    </div>
+                </div>
+                <!-- Spotlight 2: Just Do The Work -->
+                <div class="spotlight-card">
+                    <img src="./images/spotlight2.jpg" alt="Just Do The Work Nike Training">
+                    <div class="spotlight-overlay">
+                        <h3>Just Do The Work</h3>
+                        <p>High-intensity gym gear engineered for strength and conditioning.</p>
+                        <a href="#training" class="nike-btn-pill">Shop Training</a>
+                    </div>
+                </div>
+                <!-- Spotlight 3: All Conditions Gear -->
+                <div class="spotlight-card">
+                    <img src="./images/spotlight3.jpg" alt="All Conditions Gear ACG">
+                    <div class="spotlight-overlay">
+                        <h3>All Conditions Gear</h3>
+                        <p>Weather-tested outdoor shoes & apparel built to explore nature.</p>
+                        <a href="#acg" class="nike-btn-pill">Shop ACG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. POPULAR RIGHT NOW (EXACT SHOES CURRENTLY ON NIKE.IN LIVE HOMEPAGE)
+         ========================================================================== -->
+    <section class="products-section">
+        <div class="nike-container">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+                <h2 class="section-title mb-0">Popular Right Now</h2>
+                <div class="d-none d-md-flex gap-2">
+                    <a href="#view-all" class="nike-btn-pill pill-light py-2 px-3 fs-6">View All Shoes</a>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1: Nike Moon Shoe OG -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <img src="./images/shoe1.jpg" alt="Nike Moon Shoe OG">
+                        <button class="wishlist-btn" title="Save to Favorites" aria-label="Add to Wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Just In</span>
+                        <h3 class="product-title">Nike Moon Shoe OG</h3>
+                        <p class="product-category">Men's Shoes</p>
+                        <p class="product-colours">2 Colours</p>
+                        <p class="product-price">MRP: ₹ 11,495.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 2: Nike Metcon 10 -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <img src="./images/shoe2.jpg" alt="Nike Metcon 10">
+                        <button class="wishlist-btn" title="Save to Favorites" aria-label="Add to Wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Best Seller</span>
+                        <h3 class="product-title">Nike Metcon 10</h3>
+                        <p class="product-category">Women's Workout Shoes</p>
+                        <p class="product-colours">4 Colours</p>
+                        <p class="product-price">MRP: ₹ 12,795.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 3: Giannis Freak 8 LE EP -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <img src="./images/shoe3.jpg" alt="Giannis Freak 8 LE EP">
+                        <button class="wishlist-btn" title="Save to Favorites" aria-label="Add to Wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Member Access</span>
+                        <h3 class="product-title">Giannis Freak 8 LE EP</h3>
+                        <p class="product-category">Basketball Shoes</p>
+                        <p class="product-colours">3 Colours</p>
+                        <p class="product-price">MRP: ₹ 10,295.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 4: Nike Cortez Leather -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <img src="./images/shoe4.jpg" alt="Nike Cortez Leather">
+                        <button class="wishlist-btn" title="Save to Favorites" aria-label="Add to Wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Retro Classic</span>
+                        <h3 class="product-title">Nike Cortez Leather</h3>
+                        <p class="product-category">Men's Shoes</p>
+                        <p class="product-colours">4 Colours</p>
+                        <p class="product-price">MRP: ₹ 7,495.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 5: Nike Pegasus 42 -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <img src="./images/shoe5.jpg" alt="Nike Pegasus 42">
+                        <button class="wishlist-btn" title="Save to Favorites" aria-label="Add to Wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Best Seller</span>
+                        <h3 class="product-title">Nike Pegasus 42</h3>
+                        <p class="product-category">Men's Road-Running Shoes</p>
+                        <p class="product-colours">6 Colours</p>
+                        <p class="product-price">MRP: ₹ 11,895.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 6: Air Jordan 1 Retro High OG 'Pro Green' -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <img src="./images/shoe6.jpg" alt="Air Jordan 1 Retro High OG Pro Green">
+                        <button class="wishlist-btn" title="Save to Favorites" aria-label="Add to Wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Just In</span>
+                        <h3 class="product-title">Air Jordan 1 High OG</h3>
+                        <p class="product-category">Women's Pro Green Shoes</p>
+                        <p class="product-colours">2 Colours</p>
+                        <p class="product-price">MRP: ₹ 16,995.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 7: Nike Zoom Vomero 5 -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <img src="./images/shoe7.jpg" alt="Nike Zoom Vomero 5">
+                        <button class="wishlist-btn" title="Save to Favorites" aria-label="Add to Wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Trending</span>
+                        <h3 class="product-title">Nike Zoom Vomero 5</h3>
+                        <p class="product-category">Women's Shoes</p>
+                        <p class="product-colours">5 Colours</p>
+                        <p class="product-price">MRP: ₹ 14,995.00</p>
+                    </div>
+                </div>
+
+                <!-- Product 8: Nike Air Force 1 '07 LV8 -->
+                <div class="product-card">
+                    <div class="product-image-box">
+                        <img src="./images/shoe8.jpg" alt="Nike Air Force 1 '07 LV8">
+                        <button class="wishlist-btn" title="Save to Favorites" aria-label="Add to Wishlist">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-badge">Iconic</span>
+                        <h3 class="product-title">Nike Air Force 1 '07 LV8</h3>
+                        <p class="product-category">Men's Shoes</p>
+                        <p class="product-colours">3 Colours</p>
+                        <p class="product-price">MRP: ₹ 9,695.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. SHOP BY SPORT (EXACT 5 SPORTS FROM LIVE NIKE.IN)
+         ========================================================================== -->
+    <section class="sports-section">
+        <div class="nike-container">
+            <h2 class="section-title">Shop by Sport</h2>
+            <div class="sports-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+                <!-- Sport: Running -->
+                <div class="sport-card">
+                    <img src="./images/sport_running.jpg" alt="Nike Running Gear">
+                    <a href="#running" class="sport-card-btn">Running</a>
+                </div>
+                <!-- Sport: Gym & Training -->
+                <div class="sport-card">
+                    <img src="./images/sport_training.jpg" alt="Nike Gym & Training">
+                    <a href="#training" class="sport-card-btn">Gym & Training</a>
+                </div>
+                <!-- Sport: Basketball -->
+                <div class="sport-card">
+                    <img src="./images/sport_basketball.jpg" alt="Nike Basketball Gear">
+                    <a href="#basketball" class="sport-card-btn">Basketball</a>
+                </div>
+                <!-- Sport: Football -->
+                <div class="sport-card">
+                    <img src="./images/sport_football.jpg" alt="Nike Football Kits & Boots">
+                    <a href="#football" class="sport-card-btn">Football</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. NIKE MEMBERSHIP BANNER
+         ========================================================================== -->
+    <section class="membership-section">
+        <div class="nike-container">
+            <div class="membership-card">
+                <img src="./images/membership.jpg" alt="Nike Members Worldwide">
+                <div class="membership-content">
+                    <span class="membership-tag">Nike Membership</span>
+                    <h2 class="membership-title">WHERE ALL ATHLETES BELONG</h2>
+                    <p class="membership-desc">
+                        Things are better as a Nike Member. Get first and exclusive access to the newest styles & innovations, free standard delivery, birthday rewards, and more.
+                    </p>
+                    <div class="membership-actions">
+                        <a href="#join-us" class="nike-btn-pill">Join Us</a>
+                        <a href="#sign-in" class="nike-btn-pill pill-outline">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. OFFICIAL NIKE INDIA DARK FOOTER
+         ========================================================================== -->
+    <footer class="nike-footer">
+        <div class="nike-container">
+            <div class="footer-top">
+                <!-- Column 1: Featured Links (All Caps Bold White) -->
+                <div class="footer-featured-links">
+                    <ul>
+                        <li><a href="#find-a-store">FIND A STORE</a></li>
+                        <li><a href="#become-a-member">BECOME A MEMBER</a></li>
+                        <li><a href="#sign-up">SIGN UP FOR EMAIL</a></li>
+                        <li><a href="#send-feedback">SEND US FEEDBACK</a></li>
+                        <li><a href="#student-discount">STUDENT DISCOUNTS</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 2: Get Help (Exact Nike India links) -->
+                <div>
+                    <h4 class="footer-col-title">GET HELP</h4>
+                    <ul class="footer-links">
+                        <li><a href="#order-status">Order Status</a></li>
+                        <li><a href="#delivery">Delivery</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#payment-options">Payment Options</a></li>
+                        <li><a href="#store-claim-policy">Store Claim Policy</a></li>
+                        <li><a href="#contact-us">Contact Us On Nike.com Inquiries</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: About Nike -->
+                <div>
+                    <h4 class="footer-col-title">ABOUT NIKE</h4>
+                    <ul class="footer-links">
+                        <li><a href="#news">News</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#investors">Investors</a></li>
+                        <li><a href="#sustainability">Sustainability</a></li>
+                        <li><a href="#nike-journal">Nike Journal</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Social Icons -->
+                <div>
+                    <div class="footer-socials">
+                        <!-- Twitter / X -->
+                        <a href="#twitter" class="social-circle-btn" title="Twitter" aria-label="Twitter">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="#facebook" class="social-circle-btn" title="Facebook" aria-label="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="#youtube" class="social-circle-btn" title="YouTube" aria-label="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#instagram" class="social-circle-btn" title="Instagram" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom: Location & Legal Policies (Matching live nike.in) -->
+            <div class="footer-bottom">
+                <div class="footer-location-copyright">
+                    <span class="location-tag">
+                        <i class="bi bi-geo-alt-fill"></i> India
+                    </span>
+                    <span class="copyright-text">
+                        © 2026 Nike, Inc. All Rights Reserved
+                    </span>
+                </div>
+
+                <div class="footer-legal-links">
+                    <a href="#guides">Guides</a>
+                    <a href="#terms-of-sale">Terms of Sale</a>
+                    <a href="#terms-of-use">Terms of Use</a>
+                    <a href="#privacy-policy">Nike Privacy Policy</a>
+                    <a href="#store-claim">Store Claim Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper (Used for Navbar dropdowns/toggling & Carousel controls) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Interactive Controls (Wishlist toggle & Video Play/Mute controls) -->
+    <script>
+        // 1. Wishlist Heart Toggle
+        document.querySelectorAll('.wishlist-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                this.classList.toggle('active');
+                const icon = this.querySelector('i');
+                if (this.classList.contains('active')) {
+                    icon.classList.remove('bi-heart');
+                    icon.classList.add('bi-heart-fill');
+                    icon.style.color = '#e02424';
+                } else {
+                    icon.classList.remove('bi-heart-fill');
+                    icon.classList.add('bi-heart');
+                    icon.style.color = '#111';
+                }
+            });
+        });
+
+        // 2. Campaign Video Controls
+        const video = document.getElementById('nikeVideoPlayer');
+        const playBtn = document.getElementById('videoPlayToggle');
+        const playIcon = document.getElementById('playIcon');
+        const muteBtn = document.getElementById('videoMuteToggle');
+        const volumeIcon = document.getElementById('volumeIcon');
+
+        if (video && playBtn && playIcon) {
+            playBtn.addEventListener('click', () => {
+                if (video.paused) {
+                    video.play();
+                    playIcon.classList.remove('bi-play-fill');
+                    playIcon.classList.add('bi-pause-fill');
+                } else {
+                    video.pause();
+                    playIcon.classList.remove('bi-pause-fill');
+                    playIcon.classList.add('bi-play-fill');
+                }
+            });
+        }
+
+        if (video && muteBtn && volumeIcon) {
+            muteBtn.addEventListener('click', () => {
+                if (video.muted) {
+                    video.muted = false;
+                    volumeIcon.classList.remove('bi-volume-mute-fill');
+                    volumeIcon.classList.add('bi-volume-up-fill');
+                } else {
+                    video.muted = true;
+                    volumeIcon.classList.remove('bi-volume-up-fill');
+                    volumeIcon.classList.add('bi-volume-mute-fill');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

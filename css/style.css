@@ -1,0 +1,1089 @@
+/* ==========================================================================
+   NIKE OFFICIAL CLONE STYLESHEET
+   100% Pure Custom CSS (With Bootstrap 5 Navbar & Carousel integration)
+   ========================================================================== */
+
+/* --- Google Fonts (Inter / Nike Clean Gothic typography) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@700&display=swap');
+
+/* --- Root Design Tokens --- */
+:root {
+    --nike-black: #111111;
+    --nike-white: #ffffff;
+    --nike-grey-bg: #f5f5f5;
+    --nike-grey-card: #f6f6f6;
+    --nike-grey-text: #707072;
+    --nike-grey-light: #e5e5e5;
+    --nike-orange: #fa5400;
+    --nike-badge-orange: #9e3500;
+    --nike-font: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --nike-banner-font: 'Oswald', 'Inter', sans-serif;
+    --transition-smooth: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* --- Global Resets & Base Styles --- */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--nike-font);
+    color: var(--nike-black);
+    background-color: var(--nike-white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+}
+
+a:hover {
+    color: var(--nike-grey-text);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nike-container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 36px;
+}
+
+@media (max-width: 768px) {
+    .nike-container {
+        padding: 0 18px;
+    }
+}
+
+/* --- Section Headings --- */
+.section-title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: var(--nike-black);
+    margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   1. PRE-HEADER UTILITY BAR
+   ========================================================================== */
+.pre-header {
+    background-color: var(--nike-grey-bg);
+    border-bottom: 1px solid var(--nike-grey-light);
+    height: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.pre-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.brand-sub-logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.brand-sub-logos svg,
+.brand-sub-logos img {
+    height: 18px;
+    width: auto;
+    fill: var(--nike-black);
+    transition: var(--transition-smooth);
+}
+
+.brand-sub-logos a:hover svg {
+    opacity: 0.6;
+}
+
+.utility-links {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--nike-black);
+}
+
+.utility-links .separator {
+    color: #cccccc;
+    user-select: none;
+}
+
+.utility-links a:hover {
+    color: var(--nike-grey-text);
+}
+
+/* ==========================================================================
+   2. MAIN BOOTSTRAP NAVBAR (NIKE STYLING OVERRIDES)
+   ========================================================================== */
+.nike-navbar {
+    background-color: var(--nike-white) !important;
+    padding: 10px 0 !important;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.nike-navbar .navbar-brand {
+    padding: 0;
+    margin-right: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.nike-swoosh-logo {
+    width: 60px;
+    height: 24px;
+    fill: var(--nike-black);
+    transition: var(--transition-smooth);
+}
+
+.nike-navbar .navbar-nav {
+    gap: 6px;
+}
+
+.nike-navbar .nav-link {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--nike-black) !important;
+    letter-spacing: -0.2px;
+    padding: 8px 12px !important;
+    position: relative;
+    transition: var(--transition-smooth);
+}
+
+.nike-navbar .nav-link:hover {
+    color: var(--nike-grey-text) !important;
+}
+
+.nike-navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 12px;
+    right: 12px;
+    height: 2px;
+    background-color: var(--nike-black);
+    transform: scaleX(0);
+    transition: transform 0.25s ease;
+}
+
+.nike-navbar .nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* --- Nike Mega Menu Dropdown --- */
+.nav-item.dropdown {
+    position: static;
+}
+
+.nike-mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: var(--nike-white);
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.08);
+    padding: 36px 0 48px;
+    margin: 0;
+    display: none;
+    animation: fadeInDropdown 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+@keyframes fadeInDropdown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-item.dropdown:hover .nike-mega-menu {
+    display: block;
+}
+
+.mega-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.mega-col-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--nike-black);
+    margin-bottom: 16px;
+    letter-spacing: -0.2px;
+}
+
+.mega-col-links li {
+    margin-bottom: 10px;
+}
+
+.mega-col-links a {
+    font-size: 14px;
+    color: var(--nike-grey-text);
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.mega-col-links a:hover {
+    color: var(--nike-black);
+}
+
+/* Header Right Actions */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-box-pill {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-box-pill input {
+    background-color: var(--nike-grey-bg);
+    border: none;
+    outline: none;
+    border-radius: 9999px;
+    height: 40px;
+    padding: 0 16px 0 42px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--nike-black);
+    width: 175px;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s;
+}
+
+.search-box-pill input:focus {
+    width: 230px;
+    background-color: #ededed;
+}
+
+.search-box-pill input::placeholder {
+    color: var(--nike-grey-text);
+}
+
+.search-icon-btn {
+    position: absolute;
+    left: 12px;
+    background: transparent;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: var(--nike-black);
+    pointer-events: none;
+}
+
+.action-icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: transparent;
+    border: none;
+    color: var(--nike-black);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.action-icon-btn:hover {
+    background-color: var(--nike-grey-bg);
+}
+
+.action-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: var(--nike-orange);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ==========================================================================
+   3. NOTIFICATION PROMO TICKER
+   ========================================================================== */
+.promo-ticker {
+    background-color: var(--nike-grey-bg);
+    padding: 12px 16px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.ticker-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--nike-black);
+    margin-bottom: 2px;
+}
+
+.ticker-subtext {
+    font-size: 12px;
+    color: var(--nike-grey-text);
+}
+
+.ticker-subtext a {
+    text-decoration: underline;
+    font-weight: 600;
+    color: var(--nike-black);
+}
+
+/* ==========================================================================
+   4. HERO CAROUSEL (BOOTSTRAP 5 CUSTOMIZATION)
+   ========================================================================== */
+.hero-carousel-section {
+    margin-bottom: 60px;
+}
+
+.nike-hero-carousel .carousel-item {
+    height: 580px;
+    background-color: #000;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .nike-hero-carousel .carousel-item {
+        height: 420px;
+    }
+}
+
+.nike-hero-carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.92);
+}
+
+/* Hero Carousel Overlay Content */
+.hero-content-wrapper {
+    text-align: center;
+    padding: 36px 20px 20px;
+}
+
+.hero-subtitle-tag {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--nike-black);
+    margin-bottom: 6px;
+}
+
+.hero-main-title {
+    font-family: var(--nike-banner-font);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.95;
+    letter-spacing: -1.5px;
+    color: var(--nike-black);
+    margin-bottom: 14px;
+}
+
+.hero-description {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--nike-grey-text);
+    max-width: 620px;
+    margin: 0 auto 24px;
+}
+
+.hero-cta-group {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* Signature Nike Pill Button */
+.nike-btn-pill {
+    background-color: var(--nike-black);
+    color: var(--nike-white) !important;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--nike-black);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.nike-btn-pill:hover {
+    background-color: var(--nike-grey-text);
+    border-color: var(--nike-grey-text);
+    color: var(--nike-white) !important;
+    transform: translateY(-1px);
+}
+
+.nike-btn-pill.pill-light {
+    background-color: transparent;
+    color: var(--nike-black) !important;
+    border-color: var(--nike-black);
+}
+
+.nike-btn-pill.pill-light:hover {
+    background-color: var(--nike-black);
+    color: var(--nike-white) !important;
+}
+
+/* Carousel Control Arrows */
+.nike-hero-carousel .carousel-control-prev,
+.nike-hero-carousel .carousel-control-next {
+    width: 48px;
+    height: 48px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.2s;
+    margin: 0 20px;
+}
+
+.nike-hero-carousel:hover .carousel-control-prev,
+.nike-hero-carousel:hover .carousel-control-next {
+    opacity: 1;
+}
+
+.nike-hero-carousel .carousel-control-prev:hover,
+.nike-hero-carousel .carousel-control-next:hover {
+    background-color: #ffffff;
+}
+
+.nike-hero-carousel .carousel-control-prev-icon,
+.nike-hero-carousel .carousel-control-next-icon {
+    filter: invert(1);
+    width: 20px;
+    height: 20px;
+}
+
+/* Carousel Indicators */
+.nike-hero-carousel .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.6;
+    margin: 0 5px;
+    border: none;
+}
+
+.nike-hero-carousel .carousel-indicators .active {
+    opacity: 1;
+    background-color: var(--nike-black);
+    outline: 2px solid #fff;
+}
+
+/* ==========================================================================
+   4.5 CAMPAIGN VIDEO SECTION (NIKE CINEMATIC ATHLETE SPOTLIGHT)
+   ========================================================================== */
+.campaign-video-section {
+    margin-bottom: 70px;
+}
+
+.video-container-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 560px;
+    background-color: #000;
+}
+
+@media (max-width: 768px) {
+    .video-container-card {
+        height: 380px;
+    }
+}
+
+.video-container-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.88);
+}
+
+.video-controls-overlay {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+}
+
+.video-ctrl-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    transition: var(--transition-smooth);
+}
+
+.video-ctrl-btn:hover {
+    background-color: #ffffff;
+    color: var(--nike-black);
+    transform: scale(1.08);
+}
+
+.video-text-content {
+    text-align: center;
+    padding: 30px 20px 0;
+}
+
+/* ==========================================================================
+   5. SPOTLIGHT / "THE LATEST" SECTION
+   ========================================================================== */
+.spotlight-section {
+    margin-bottom: 70px;
+}
+
+.spotlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 992px) {
+    .spotlight-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.spotlight-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 480px;
+    cursor: pointer;
+}
+
+.spotlight-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.spotlight-card:hover img {
+    transform: scale(1.04);
+}
+
+.spotlight-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+    color: #ffffff;
+}
+
+.spotlight-overlay h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.spotlight-overlay p {
+    font-size: 14px;
+    color: #e0e0e0;
+    margin-bottom: 16px;
+}
+
+.spotlight-overlay .nike-btn-pill {
+    background-color: #ffffff;
+    color: var(--nike-black) !important;
+    border-color: #ffffff;
+}
+
+.spotlight-overlay .nike-btn-pill:hover {
+    background-color: #cccccc;
+}
+
+/* ==========================================================================
+   6. POPULAR RIGHT NOW (PRODUCT CARDS GRID)
+   ========================================================================== */
+.products-section {
+    margin-bottom: 70px;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 1100px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    background: transparent;
+    transition: transform 0.2s ease;
+}
+
+.product-image-box {
+    background-color: var(--nike-grey-card);
+    position: relative;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.product-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+    transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.product-card:hover .product-image-box img {
+    transform: scale(1.06);
+}
+
+/* Wishlist Heart Icon on Card */
+.wishlist-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: var(--nike-black);
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: var(--transition-smooth);
+    z-index: 2;
+}
+
+.wishlist-btn:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+.wishlist-btn.active svg {
+    fill: #e02424;
+    color: #e02424;
+}
+
+/* Product Info */
+.product-info {
+    padding: 14px 0 6px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-badge {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--nike-badge-orange);
+    margin-bottom: 2px;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--nike-black);
+    line-height: 1.3;
+    margin-bottom: 2px;
+}
+
+.product-category {
+    font-size: 14px;
+    color: var(--nike-grey-text);
+    margin-bottom: 2px;
+}
+
+.product-colours {
+    font-size: 14px;
+    color: var(--nike-grey-text);
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--nike-black);
+    margin-top: auto;
+}
+
+/* ==========================================================================
+   7. SHOP BY SPORT
+   ========================================================================== */
+.sports-section {
+    margin-bottom: 70px;
+}
+
+.sports-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+@media (max-width: 992px) {
+    .sports-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .sports-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.sport-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 3 / 4;
+    cursor: pointer;
+}
+
+.sport-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.sport-card:hover img {
+    transform: scale(1.05);
+}
+
+.sport-card-btn {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background-color: var(--nike-white);
+    color: var(--nike-black) !important;
+    padding: 8px 22px;
+    border-radius: 9999px;
+    font-size: 15px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: var(--transition-smooth);
+}
+
+.sport-card:hover .sport-card-btn {
+    background-color: var(--nike-grey-bg);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   8. NIKE MEMBERSHIP BANNER
+   ========================================================================== */
+.membership-section {
+    margin-bottom: 80px;
+}
+
+.membership-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+}
+
+.membership-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.65);
+    z-index: 1;
+}
+
+.membership-content {
+    position: relative;
+    z-index: 2;
+    padding: 50px;
+    color: #ffffff;
+    max-width: 600px;
+}
+
+.membership-tag {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+    color: #ffcc00;
+}
+
+.membership-title {
+    font-family: var(--nike-banner-font);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 0.95;
+    margin-bottom: 16px;
+}
+
+.membership-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    color: #f0f0f0;
+}
+
+.membership-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.membership-actions .nike-btn-pill {
+    background-color: #ffffff;
+    color: var(--nike-black) !important;
+    border-color: #ffffff;
+}
+
+.membership-actions .nike-btn-pill:hover {
+    background-color: #e5e5e5;
+}
+
+.membership-actions .nike-btn-pill.pill-outline {
+    background-color: transparent;
+    color: #ffffff !important;
+    border-color: #ffffff;
+}
+
+.membership-actions .nike-btn-pill.pill-outline:hover {
+    background-color: #ffffff;
+    color: var(--nike-black) !important;
+}
+
+/* ==========================================================================
+   9. OFFICIAL NIKE DARK FOOTER
+   ========================================================================== */
+.nike-footer {
+    background-color: var(--nike-black);
+    color: #7e7e7e;
+    padding-top: 60px;
+    font-size: 12px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1fr 1.5fr;
+    gap: 30px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #222222;
+}
+
+@media (max-width: 992px) {
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer Featured Column (All Caps Bold White) */
+.footer-featured-links ul li {
+    margin-bottom: 14px;
+}
+
+.footer-featured-links ul li a {
+    color: #ffffff;
+    font-family: var(--nike-banner-font);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.footer-featured-links ul li a:hover {
+    color: #cccccc;
+}
+
+/* Regular Footer Columns */
+.footer-col-title {
+    color: #ffffff;
+    font-family: var(--nike-banner-font);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links li a {
+    color: #7e7e7e;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.footer-links li a:hover {
+    color: #ffffff;
+}
+
+/* Social Media Icons */
+.footer-socials {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+@media (max-width: 992px) {
+    .footer-socials {
+        justify-content: flex-start;
+    }
+}
+
+.social-circle-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #7e7e7e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--nike-black);
+    transition: var(--transition-smooth);
+}
+
+.social-circle-btn:hover {
+    background-color: #ffffff;
+    color: var(--nike-black);
+    transform: translateY(-2px);
+}
+
+.social-circle-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* Bottom Legal Sub-Footer */
+.footer-bottom {
+    padding: 24px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-location-copyright {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.location-tag {
+    color: #ffffff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.copyright-text {
+    color: #7e7e7e;
+}
+
+.footer-legal-links {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-legal-links a {
+    color: #7e7e7e;
+}
+
+.footer-legal-links a:hover {
+    color: #ffffff;
+}
